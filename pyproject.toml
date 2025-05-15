@@ -1,0 +1,30 @@
+[project]
+name = "back2basics-ml"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "einops>=0.8.1",
+    "flax>=0.10.6",
+    "ipykernel>=6.29.5",
+    "jax[cuda12]>=0.6.0",
+    "matplotlib>=3.10.3",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
+    "torch>=2.7.0",
+    "tqdm>=4.67.1",
+    "tyro>=0.9.20",
+    "wandb>=0.19.11",
+]
+
+[tool.uv.sources]
+torch = [
+  { index = "pytorch-cpu" },
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
